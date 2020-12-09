@@ -16,6 +16,8 @@
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.4",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "openai-api": "^1.0.12",
+    "openai-api-node": "^1.0.0"
   }
 }
