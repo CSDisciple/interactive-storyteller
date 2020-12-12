@@ -32,7 +32,7 @@ User: Who was the first man in space ?
 
   Marv : `;
 
-  console.log(process.env.API_KEY);
+
 var openai = new OpenAI(openaikey)
 openai.CompletionsCreate(prompt, max_tokes = 20, engine='davinci')
   .then(function (data) {
