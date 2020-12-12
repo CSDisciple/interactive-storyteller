@@ -25,15 +25,15 @@
         ></textarea>
       </div>
       <div>
-        <button class="app_post_btn" @click="savePost">Add</button>
+        <button class="app_post_btn" @click="savePost" :key="componentKey">Add</button>
       </div>
        <!-- <div>
-        <router-link v-bind:to="{ name: 'Community' }" >
+        <router-link v-bind:to="{ name: 'Community' }" :key="componentKey" >
           <button class="btn btn-primary" @click="savePost">
           Add
           </button>
-          </router-link>
-      </div> -->
+          </router-link> -->
+       
     </div>
   </div>
 </template>
@@ -49,6 +49,7 @@ export default {
         title: "",
         description: "",
       },
+      componentKey: 0
     };
   },
   methods: {
@@ -67,8 +68,13 @@ export default {
         .catch((e) => {
           console.log(e);
         });
-        this.$router.push({ name: 'Community' });
+        this.componentKey +=1;
+        // this.$router.push({ name: 'Community' });
+        // this.$router.go(0);
+   
+       
     },
+    
   },
 };
 </script>
