@@ -6,6 +6,7 @@ const database = require("./models");
 const OpenAI = require('openai-api-node');
 const OPEN_AI_API_KEY = require('./config/gpt3');
 const openaikey = OPEN_AI_API_KEY.key;
+
 const prompt = `    Marv is a chatbot that reluctantly answers questions.
 
 ###
@@ -30,6 +31,8 @@ User: When did the first airplane fly ?
 User: Who was the first man in space ?
 
   Marv : `;
+
+  console.log(process.env.API_KEY);
 var openai = new OpenAI(openaikey)
 openai.CompletionsCreate(prompt, max_tokes = 20, engine='davinci')
   .then(function (data) {
@@ -42,7 +45,7 @@ openai.CompletionsCreate(prompt, max_tokes = 20, engine='davinci')
     console.log('Error connecting to GTP3 API\n', err)
   })
 
-
+//testing array access
 // // const array = {
 // //   id: 'cmpl-QUwTH3CxNVVgrcjiH89Ece7j',
 // //   object: 'text_completion',
