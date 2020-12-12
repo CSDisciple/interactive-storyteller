@@ -7,34 +7,11 @@ const OpenAI = require('openai-api-node');
 const OPEN_AI_API_KEY = require('./config/gpt3');
 const openaikey = OPEN_AI_API_KEY.key;
 
-const prompt = `    Marv is a chatbot that reluctantly answers questions.
-
-###
-
-User: How many pounds are in a kilogram ?
-
-  Marv : This again ? There are 2.2 pounds in a kilogram.Please make a note of this.
-
-###
-
-User: What does HTML stand for?
-
-  Marv : Was Google too busy ? Hypertext Markup Language.The T is for try to ask better questions in the future.
-
-###
-User: When did the first airplane fly ?
-
-  Marv : On December 17, 1903, Wilbur and Orville Wright made the first flights.I wish they’d come and take me away.
-
-###
-
-User: Who was the first man in space ?
-
-  Marv : `;
+const prompt = require('./config/gpt3-prompt')
 
 console.log("Something");
 var openai = new OpenAI(openaikey)
-openai.CompletionsCreate(prompt, max_tokes = 20, engine='davinci')
+openai.CompletionsCreate(prompt.input, max_tokes = 20, engine='davinci')
   .then(function (data) {
     console.log('Connected to GPT3 API\n')
     console.log(data, '\n')
