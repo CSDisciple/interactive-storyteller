@@ -27,12 +27,6 @@
       <div>
         <button class="app_post_btn" @click="savePost" :key="componentKey">Add</button>
       </div>
-       <!-- <div>
-        <router-link v-bind:to="{ name: 'Community' }" :key="componentKey" >
-          <button class="btn btn-primary" @click="savePost">
-          Add
-          </button>
-          </router-link> -->
        
     </div>
   </div>
@@ -71,7 +65,7 @@ export default {
         this.componentKey +=1;
         // this.$router.push({ name: 'Community' });
         // this.$router.go(0);
-   
+        alert('Success! Navigate to Community page to see your post.');
        
     },
     
