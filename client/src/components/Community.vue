@@ -24,43 +24,42 @@
   </div>
 </template>-->
 <template>
-
   <div class="posts">
+    <div
+      style="width: 975px"
+      class="ridge_border_center"
+      v-if="posts.length > 0"
+    >
+      <table border="0" style="width: 100%; border: 0px">
+        <tr v-for="post in posts" v-bind:key="post" class="block">
+          <div class="feedback-buttons">
+            <td><i type="button" class="arrow up"></i></td>
+            <td><i type="button" class="arrow down"></i></td>
+          </div>
 
-     
-      <div style="width:975px" class="ridge_border_center" v-if="posts.length > 0">
-        
-        <table border="0" style="width:100%;border:0px;">  
-            <tr v-for="post in posts" v-bind:key="post" class="block">
-              <div class = "feedback-buttons">
-                <td ><i type="button" class="arrow up"></i></td>
-                <td ><i type="button" class="arrow down" ></i></td>
-              </div>
-                
-                <div class = "post">
-                    <td colspan="2"><b>{{ post.title }}</b></td>
-                
-                <td colspan="3">{{ post.description }}</td>
-                </div>
-              
-            </tr>
-  
-        </table>
-        <div>
-          <router-link v-bind:to="{ name: 'NewPost' }" class="btn btn-primary">Add Post</router-link>
-        </div>
-      </div>
+          <div class="post">
+            <td colspan="2">
+              <b>{{ post.title }}</b>
+            </td>
 
-      <div v-else>
-        There are no posts.. Lets add one now <br /><br />
+            <td colspan="3">{{ post.description }}</td>
+          </div>
+        </tr>
+      </table>
+      <div>
         <router-link v-bind:to="{ name: 'NewPost' }" class="btn btn-primary"
           >Add Post</router-link
         >
       </div>
-      
     </div>
 
-
+    <div v-else>
+      There are no posts.. Lets add one now <br /><br />
+      <router-link v-bind:to="{ name: 'NewPost' }" class="btn btn-primary"
+        >Add Post</router-link
+      >
+    </div>
+  </div>
 </template>
 
 
@@ -132,14 +131,14 @@ a.add_post_link {
 </style>-->
 
 <style type="text/css">
-.block{
+.block {
   display: flex;
 }
-.feedback-buttons{
+.feedback-buttons {
   display: flex;
   flex-flow: column;
 }
-.post{
+.post {
   display: flex;
   flex-flow: column;
 }
@@ -178,32 +177,29 @@ a.add_post_link {
   font-weight: bold;
 }
 .arrow {
-    border: solid rgb(0, 0, 0);
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 3px;
-  }
-  
-  .up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-  }
-  
-  .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
+  border: solid rgb(0, 0, 0);
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+}
 
-  .ridge_border_center {
-    border: 2px;
-    padding: 10px;
-    border-radius: 25px;
-    border-style: ridge;
-    width: 60%;
-    margin:auto;
-  }
-  
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
 
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 
+.ridge_border_center {
+  border: 2px;
+  padding: 10px;
+  border-radius: 25px;
+  border-style: ridge;
+  width: 60%;
+  margin: auto;
+}
 </style>
 
