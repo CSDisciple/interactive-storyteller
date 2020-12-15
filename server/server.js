@@ -1,26 +1,39 @@
 const express = require("express");
+require('dotenv').config()
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const database = require("./models");
 const OpenAI = require('openai-api-node');
 const OPEN_AI_API_KEY = require('./config/gpt3');
-const openaikey = OPEN_AI_API_KEY.key;
+const openaikey = OPEN_AI_API_KEY.AI_API;
+const prompt = require('./gpt3-prompt')
+const NETLIFY_API = require('../.netlify/functions/api')
+let dbURL;
+//make this work to deploy website securely on Netlify
+// fetch(NETLIFY_API)
+// .then(response => response.json())
+// .then(json => {
+//     dbURL = json.db_url;
+// })
+// .catch(err =>{
+//   console.log("Error connecting to Netlify: ", err)
+// })
 
-const prompt = require('./config/gpt3-prompt')
 
-console.log("Something");
-var openai = new OpenAI(openaikey)
-openai.CompletionsCreate(prompt.input, max_tokes = 20, engine='davinci')
-  .then(function (data) {
-    console.log('Connected to GPT3 API\n')
-    console.log(data, '\n')
-    console.log('GPT 3 response is: ', data.choices.map(a => a.text))
+//talk to OpenAI *keep it commented out to save token quota
 
-  })
-  .catch(function (err) {
-    console.log('Error connecting to GTP3 API\n', err)
-  })
+// var openai = new OpenAI(openaikey)
+// openai.CompletionsCreate(prompt.input, max_tokes = 20, engine='davinci')
+//   .then(function (data) {
+//     console.log('Connected to GPT3 API\n')
+//     console.log(data, '\n')
+//     console.log('GPT 3 response is: ', data.choices.map(a => a.text))
+
+//   })
+//   .catch(function (err) {
+//     console.log('Error connecting to GTP3 API\n', err)
+//   })
 
 //testing array access
 // // const array = {
