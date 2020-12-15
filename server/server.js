@@ -4,12 +4,16 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const database = require("./models");
-const OpenAI = require('openai-api-node');
-const OPEN_AI_API_KEY = require('./config/gpt3');
-const openaikey = OPEN_AI_API_KEY.AI_API;
-const prompt = require('./gpt3-prompt')
-const NETLIFY_API = require('../.netlify/functions/api')
-let dbURL;
+
+//implement this when you can securely use API key in deployment
+
+// const OpenAI = require('openai-api-node');
+// const OPEN_AI_API_KEY = require('./config/gpt3');
+// const openaikey = OPEN_AI_API_KEY.AI_API;
+// const prompt = require('./gpt3-prompt')
+// const NETLIFY_API = require('../.netlify/functions/api')
+// let dbURL;
+
 //make this work to deploy website securely on Netlify
 // fetch(NETLIFY_API)
 // .then(response => response.json())
