@@ -3,7 +3,7 @@
 
 <!--Bootstrap "jumbotron" -->
 <div class = "jumbotron jumbotron-fluid bg-dark text-white">
-	<h1 class = "text-center">The Hunter's Wife</h1>
+	<h1 class = "text-center">Regret</h1>
 	<p class = "text-center">By Anthony Doerr</p>
 </div>
 <!--End of "jumbotron" -->
