@@ -23,7 +23,7 @@
         </tr>
       </table>
       <div>
-        <router-link v-bind:to="{ name: 'NewPost' }" class="btn btn-primary"
+        <router-link v-bind:to="{ name: 'NewPost' }" class="button btn btn-primary"
           >Add Post</router-link
         >
       </div>
@@ -31,7 +31,7 @@
 
     <div v-else>
       There are no posts.. Lets add one now <br /><br />
-      <router-link v-bind:to="{ name: 'NewPost' }" class="btn btn-primary"
+      <router-link v-bind:to="{ name: 'NewPost' }" class="button btn btn-primary"
         >Add Post</router-link
       >
     </div>
@@ -72,6 +72,12 @@ export default {
 
 
 <style type="text/css">
+.button{
+  margin-top: 1em;
+}
+.posts{
+  margin-top: 1em;
+}
 .block {
   display: flex;
   border-bottom: 1px solid black;
@@ -109,7 +115,7 @@ table tr:nth-child(1) {
 a {
   color: #4d7ef7;
   text-decoration: none;
-  margin-top: 1em;
+  
 }
 a.add_post_link {
   background: #4d7ef7;
