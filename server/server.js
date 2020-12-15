@@ -7,6 +7,7 @@ const database = require("./models");
 
 //implement this when you can securely use API key in deployment
 
+
 // const OpenAI = require('openai-api-node');
 // const OPEN_AI_API_KEY = require('./config/gpt3');
 // const openaikey = OPEN_AI_API_KEY.AI_API;
