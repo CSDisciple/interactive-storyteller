@@ -1,5 +1,5 @@
 # Local Netlify folder
 .netlify
-config
+config/gpt3.js
 .env
 node_modules

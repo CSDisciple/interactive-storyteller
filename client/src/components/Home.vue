@@ -22,7 +22,7 @@
           <div class="card-body">
             <h4 class="card-title">The Hunter's Wife</h4>
             <p class="card-text">It was the hunter's first time outside Montana. He woke, stricken still with the hours-old vision of ascending through rose-lit cumulus....</p>
-            <a href="story1.html" class="btn btn-primary stretched-link">Continue reading</a>
+            <router-link to="/Story1" class = "btn btn-primary stretched-link">Continue reading</router-link> 
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
           <div class="card-body">
             <h4 class="card-title">To Build a Fire</h4>
             <p class="card-text">Day had broken cold and grey, exceedingly cold and grey, when the man turned aside from the main Yukon trail and climbed the high...</p>
-            <a href="story6.html" class="btn btn-primary stretched-link">Continue reading</a>
+            <router-link to="/Story2" class = "btn btn-primary stretched-link">Continue reading</router-link> 
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@
           <div class="card-body">
             <h4 class="card-title">Regret</h4>
             <p class="card-text">Mamzelle Aurlie possessed a good strong figure, ruddy cheeks, hair that was changing from brown to gray, and a determined eye. She...</p>
-            <a href="story3.html" class="btn btn-primary stretched-link">Continue reading</a>
+            <router-link to="/Story3" class = "btn btn-primary stretched-link">Continue reading</router-link> 
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
           <div class="card-body">
             <h4 class="card-title">The Tell-Tale Heart</h4>
             <p class="card-text">TRUE!-NERVOUS--very, very dreadfully nervous I had been and am! but why will you say that I am mad? The disease had sharpened my senses...</p>
-            <a href="story4.html" class="btn btn-primary stretched-link">Continue reading</a>
+           <router-link to="/Story4" class = "btn btn-primary stretched-link">Continue reading</router-link> 
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
           <div class="card-body">
             <h4 class="card-title">The Skylight Room</h4>
             <p class="card-text">First Mrs. Parker would show you the double parlours. You would not dare to interrupt her description of their advantages and of the merits...</p>
-            <a href="story5.html" class="btn btn-primary stretched-link">Continue reading</a>
+            <router-link to="/Story5" class = "btn btn-primary stretched-link">Continue reading</router-link> 
           </div>
         </div>
       </div>	
@@ -92,7 +92,7 @@
           <div class="card-body">
             <h4 class="card-title">The Cactus</h4>
             <p class="card-text">The most notable thing about Time is that it is so purely relative. A large amount of reminiscence is, by common consent, conceded to the drowning...</p>
-            <a href="story6.html" class="btn btn-primary stretched-link">Continue reading</a>
+            <router-link to="/Story6" class = "btn btn-primary stretched-link">Continue reading</router-link> 
           </div>
         </div>
       </div>
