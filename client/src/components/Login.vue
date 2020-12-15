@@ -17,7 +17,7 @@
           </div>
   
           <a class="btn btn-primary btn-large btn-block" href="#">login</a>
-          <a class="login-link" href="#">Lost your password?</a>
+          <a class="login-link" href="#">Forgot Password?</a>
           <button v-google-signin-button="clientId" class="google-signin-button" data-onsuccess="OnGoogleAuthSuccess"> Continue with Google</button>
         </div>
       </div>
@@ -51,6 +51,7 @@ export default {
 <style>
 .google-signin-button {
   color: white;
+  margin-top: 1em;
   background-color:#343a40;
   height: 50px;
   font-size: 16px;
